@@ -8,5 +8,4 @@ dateコマンドを用いて時刻を設定する。
 * date
 * wget
 * sed
-* bc
 * echo
