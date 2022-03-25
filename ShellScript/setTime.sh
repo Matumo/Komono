@@ -1,7 +1,7 @@
 sudo date > /dev/null
 
 start_time=`date +%s%3N`
-server_time=`wget -q http://ntp-a1.nict.go.jp/cgi-bin/jst -O - | sed -n 4p`
+server_time=`wget -q http://worldtimeapi.org/api/timezone/Asia/Tokyo.txt -O - | sed -n 4p`
 end_time=`date +%s%3N`
 lag=`echo $(($end_time - $start_time))`
 time=`echo $(($(echo $server_time | sed 's/\.//') + $lag))`
